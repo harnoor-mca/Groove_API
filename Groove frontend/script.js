@@ -1,6 +1,7 @@
+const backendBase= "https://groove-api-backend.onrender.com";
 const clientId = "43ce054477e8412488f4f770e5b677aa";
 const clientSecret = "48b7b435c1c6429bb05e0a707bf18827";
-const backendBase= "https://groove-api-backend.onrender.com";
+
 console.log("searchartist() triggered")
  
 async function searchartist() {
