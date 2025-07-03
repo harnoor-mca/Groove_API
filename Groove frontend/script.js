@@ -1,13 +1,11 @@
-const backendBase= "https://groove-api-backend.onrender.com";
 const clientId = "43ce054477e8412488f4f770e5b677aa";
 const clientSecret = "48b7b435c1c6429bb05e0a707bf18827";
-
 console.log("searchartist() triggered")
  
 async function searchartist() {
   const artistName = document.getElementById("artistinput").value;
   
-  const result = await fetch(`${backendBase}/search?artist=${artistName}`);
+  const result = await fetch(`http://localhost:3000/search?artist=${artistName}`);
 
   const data = await result.json();
   const artist = data.artists.items[0];
@@ -30,7 +28,7 @@ async function searchartist() {
 const artistId = artist.id;
 
 
-const albumsRes = await fetch(`${backendBase}/albums?artistId=${artistId}`);
+const albumsRes = await fetch(`http://localhost:3000/albums?artistId=${artistId}`);
 const albumsData = await albumsRes.json();
 
 
@@ -43,7 +41,7 @@ albumHTML += "</ul>";
 document.getElementById("results").innerHTML += albumHTML;
 
 
-const topTracksRes = await fetch(`${backendBase}/top-tracks?artistId=${artistId}`);
+const topTracksRes = await fetch(`http://localhost:3000/top-tracks?artistId=${artistId}`);
   const topTracksData = await topTracksRes.json();
   
   let trackHTML = "<h3>Top Tracks:</h3><ul id='tracklist'>";
