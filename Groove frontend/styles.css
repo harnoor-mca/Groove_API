@@ -165,7 +165,7 @@ color:white;
 h3{
     text-align: center;
 }
-  @media only screen and (min-width:700px{
+  @media only screen and (min-width:700px){
    body {
        height:100vh;
        width:100vw;
@@ -190,6 +190,7 @@ h3{
     }
 
   }
+
 
 
 
