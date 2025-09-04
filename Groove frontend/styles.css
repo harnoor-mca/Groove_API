@@ -165,10 +165,10 @@ color:white;
 h3{
     text-align: center;
 }
-  @media only screen and (min-width:700px) {
-*{
-    height:dvh;
-    width:dvw;
+  @media only screen and (min-width:700px{
+   .content {
+       height:100vh;
+       width:100vw;
 }
 
     h1 {
@@ -190,4 +190,5 @@ h3{
     }
 
   }
+
 
